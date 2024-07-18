@@ -1,3 +1,4 @@
+// controllers/paymentMethodController.js
 const PaymentMethod = require('../models/PaymentMethod');
 
 exports.addPaymentMethod = async (req, res) => {
@@ -9,11 +10,10 @@ exports.addPaymentMethod = async (req, res) => {
       methodType,
       provider,
       accountNumber,
-      expiryDate,
+      expiryDate
     });
 
     await paymentMethod.save();
-    console.log(paymentMethod); // check in browseer
     res.json(paymentMethod);
   } catch (err) {
     console.error(err.message);

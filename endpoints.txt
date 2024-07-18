@@ -1,0 +1,27 @@
+transactions:-
+----
+createTransaction:-http://localhost:5000/api/transactions
+
+getTransactions:-http://localhost:5000/api/transactions/$transactionId
+
+getTransactionStatus:- http://localhost:5000/api/transactions/:transactionId/process
+
+handleRefund :- http://localhost:5000/api/transactions/:transactionId/refund
+
+----
+
+
+paymentMethod
+----
+-> add paymentMethod:-http://localhost:5000/api/payment-methods
+
+
+-------
+---------
+auth
+
+login:-http://localhost:5000/api/auth/login
+
+register:-http://localhost:5000/api/auth/register
+
+ 

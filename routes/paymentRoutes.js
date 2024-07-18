@@ -1,4 +1,4 @@
-//credit, debit or wallet???
+// routes/paymentMethodRoutes.js
 const express = require('express');
 const router = express.Router();
 const { addPaymentMethod } = require('../controllers/paymentMethodController');

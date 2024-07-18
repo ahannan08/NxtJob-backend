@@ -1,4 +1,4 @@
-// middleware/authMiddleware.js
+// middleware , include in routes
 const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
