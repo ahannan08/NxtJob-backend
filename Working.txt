@@ -1,0 +1,78 @@
+Working of the backend application:-
+copy paste the jsons and routes in postman to verify its working.
+
+
+
+register:-http://localhost:5000/api/auth/register
+
+{
+  "email": "testuser1@example.com",
+  "password": "Password123"
+}
+
+--------------------------------------------------------------------------------------
+
+login:-http://localhost:5000/api/auth/login
+
+{
+  "email": "testuse1@example.com",
+  "password": "Password123"
+}
+
+--------------------------------------------------------------------------------------
+-> add paymentMethod:-http://localhost:5000/api/payment-methods
+
+{
+  "userId": "<USER_ID>",
+  "methodType": "credit_card",
+  "provider": "Visa",
+  "accountNumber": "4111111111111111",
+  "expiryDate": "2025-12-31"
+}
+
+--------------------------------------------------------------------------------------
+
+
+createTransaction:-http://localhost:5000/api/transactions
+
+{
+  "userId": "<USER_ID>",
+  "amount": 100.00,
+  "paymentMethodId": "<PAYMENT_METHOD_ID>"
+}
+
+
+--------------------------------------------------------------------------------------
+
+(Route to get the status of Payment)
+getTransactionStatus:- http://localhost:5000/api/transactions/:transactionId
+
+{
+  "transactionId": "<TRANSACTION_ID>",
+  "userId": "<USER_ID>",
+  "amount": 100.00,
+  "transactionType": "credit_card",
+  "status": "completed",
+  "createdAt": "2024-07-14T12:34:56.789Z"
+}
+
+
+--------------------------------------------------------------------------------------
+
+(Route to confirm the status of Payment)
+processTransaction:-http://localhost:5000/api/transactions/$transactionId/process
+
+--------------------------------------------------------------------------------------
+
+
+(Route whenn status is failure)
+handleRefund :- http://localhost:5000/api/transactions/:transactionId/refund
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+ 
